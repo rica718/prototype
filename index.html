@@ -299,13 +299,13 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
       <div class="card">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">H</div>
-          <div style="flex:1"><b style="font-size:14px">Ha</b><br><span class="tiny muted">오늘 · 골프장</span></div>
-          <span class="pill purple">야외</span>
+          <div style="flex:1"><b style="font-size:14px">Ha</b><br><span class="tiny muted" data-i="golf_time">오늘 · 골프장</span></div>
+          <span class="pill purple" data-i="golf_pill">야외</span>
         </div>
-        <p style="font-size:13.5px;margin:0 0 10px">알바 선크림 바르고 골프장 다녀왔어요 ☀️⛳</p>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="golf_body">알바 선크림 바르고 골프장 다녀왔어요 ☀️⛳</p>
         <div class="photo">
           <video src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/proto-golf-v2.mp4" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" controls playsinline muted loop preload="metadata"></video>
-          <span class="phototag">⛳ 골프장 알바</span>
+          <span class="phototag" data-i="golf_tag">⛳ 골프장 알바</span>
         </div>
         <div class="feedact">
           <button onclick="cheer(this)">🤍 <span data-i="cheer">응원</span> <b class="cnt">86</b></button>
@@ -316,14 +316,14 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
           <div class="card">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">S</div>
-          <div style="flex:1"><b style="font-size:14px">Suni</b><br><span class="tiny muted">방금 · 밤 산책</span></div>
-          <span class="pill pink">일상</span>
+          <div style="flex:1"><b style="font-size:14px">Suni</b><br><span class="tiny muted" data-i="fire_time">방금 · 밤 산책</span></div>
+          <span class="pill pink" data-i="fire_pill">일상</span>
         </div>
         <div class="photo">
           <video src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/proto-firework-v2.mp4" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" controls playsinline muted loop preload="metadata"></video>
-          <span class="phototag">🌙 오늘 밤</span>
+          <span class="phototag" data-i="fire_tag">🌙 오늘 밤</span>
         </div>
-        <p style="font-size:13.5px;margin:12px 0 0">쌩얼이라 밤에 밖에 나왔어요 🌙✨</p>
+        <p style="font-size:13.5px;margin:12px 0 0" data-i="fire_body">쌩얼이라 밤에 밖에 나왔어요 🌙✨</p>
         <div class="feedact">
           <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">57</b></button>
           <button>💬 <span>댓글</span> 8</button>
@@ -334,13 +334,13 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
       <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">채</div>
-          <div style="flex:1"><b style="font-size:14px">채원</b><br><span class="tiny muted">스킨케어</span></div>
-          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700">광고</span>
+          <div style="flex:1"><b style="font-size:14px">채원</b><br><span class="tiny muted" data-i="ad1_cat">스킨케어</span></div>
+          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700" data-i="ad_label">광고</span>
         </div>
-        <p style="font-size:13.5px;margin:0 0 10px">아침 수분 세럼 루틴 공유해요 💧 흡수력이 진짜 좋아요</p>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="ad1_body">아침 수분 세럼 루틴 공유해요 💧 흡수력이 진짜 좋아요</p>
         <div class="photo">
           <video src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/proto-demo1.mp4" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" controls playsinline muted loop preload="metadata"></video>
-          <span class="phototag">💧 모닝 루틴</span>
+          <span class="phototag" data-i="ad1_tag">💧 모닝 루틴</span>
         </div>
         <div class="feedact">
           <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">142</b></button>
@@ -352,13 +352,13 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
       <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">지</div>
-          <div style="flex:1"><b style="font-size:14px">지아</b><br><span class="tiny muted">메이크업</span></div>
-          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700">광고</span>
+          <div style="flex:1"><b style="font-size:14px">지아</b><br><span class="tiny muted" data-i="ad2_cat">메이크업</span></div>
+          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700" data-i="ad_label">광고</span>
         </div>
-        <p style="font-size:13.5px;margin:0 0 10px">데일리 메이크업 같이 해요 ✨ 오늘의 톤업 꿀팁 방출!</p>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="ad2_body">데일리 메이크업 같이 해요 ✨ 오늘의 톤업 꿀팁 방출!</p>
         <div class="photo">
           <video src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/proto-demo2.mp4" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" controls playsinline muted loop preload="metadata"></video>
-          <span class="phototag">✨ 데일리 메이크업</span>
+          <span class="phototag" data-i="ad2_tag">✨ 데일리 메이크업</span>
         </div>
         <div class="feedact">
           <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">231</b></button>
@@ -370,13 +370,13 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
       <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">린</div>
-          <div style="flex:1"><b style="font-size:14px">린다</b><br><span class="tiny muted">립</span></div>
-          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700">광고</span>
+          <div style="flex:1"><b style="font-size:14px">린다</b><br><span class="tiny muted" data-i="ad3_cat">립</span></div>
+          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700" data-i="ad_label">광고</span>
         </div>
-        <p style="font-size:13.5px;margin:0 0 10px">신상 틴트 발색 비교 💄 이거 완전 인생템이에요</p>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="ad3_body">신상 틴트 발색 비교 💄 이거 완전 인생템이에요</p>
         <div class="photo">
           <video src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/proto-demo3.mp4" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" controls playsinline muted loop preload="metadata"></video>
-          <span class="phototag">💄 틴트 발색</span>
+          <span class="phototag" data-i="ad3_tag">💄 틴트 발색</span>
         </div>
         <div class="feedact">
           <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">188</b></button>
@@ -388,13 +388,13 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
       <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">미</div>
-          <div style="flex:1"><b style="font-size:14px">미소</b><br><span class="tiny muted">홈케어</span></div>
-          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700">광고</span>
+          <div style="flex:1"><b style="font-size:14px">미소</b><br><span class="tiny muted" data-i="ad4_cat">홈케어</span></div>
+          <span class="pill" style="background:#eceef1;color:#5b6570;font-weight:700" data-i="ad_label">광고</span>
         </div>
-        <p style="font-size:13.5px;margin:0 0 10px">주말 홈케어 마스크팩 루틴 🧖‍♀️ 오늘도 꿀잠 각!</p>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="ad4_body">주말 홈케어 마스크팩 루틴 🧖‍♀️ 오늘도 꿀잠 각!</p>
         <div class="photo">
           <video src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/proto-demo4.mp4" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" controls playsinline muted loop preload="metadata"></video>
-          <span class="phototag">🧖‍♀️ 홈케어</span>
+          <span class="phototag" data-i="ad4_tag">🧖‍♀️ 홈케어</span>
         </div>
         <div class="feedact">
           <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">96</b></button>
@@ -777,6 +777,12 @@ const I={
   before:'BEFORE',after:'AFTER',feed_body1:'2주 루틴 바꾸고 트러블이 確 줄었어요! 같이 응원해요 🙌',
   cheer:'응원',comment:'댓글',save:'저장',feed_ago2:'어제 · 루틴 공유',routine_share:'루틴 공유',
   feed_body2:'건성 피부 밤 루틴 ✨ 토너패드 → 세럼 → 수분크림 순서 강추!',p_toner:'토너패드',p_serum:'세럼',p_cream:'수분크림',
+  golf_time:'오늘 · 골프장',golf_pill:'야외',golf_body:'알바 선크림 바르고 골프장 다녀왔어요 ☀️⛳',golf_tag:'⛳ 골프장 알바',
+  fire_time:'방금 · 밤 산책',fire_pill:'일상',fire_body:'쌩얼이라 밤에 밖에 나왔어요 🌙✨',fire_tag:'🌙 오늘 밤',ad_label:'광고',
+  ad1_cat:'스킨케어',ad1_body:'아침 수분 세럼 루틴 공유해요 💧 흡수력이 진짜 좋아요',ad1_tag:'💧 모닝 루틴',
+  ad2_cat:'메이크업',ad2_body:'데일리 메이크업 같이 해요 ✨ 오늘의 톤업 꿀팁 방출!',ad2_tag:'✨ 데일리 메이크업',
+  ad3_cat:'립',ad3_body:'신상 틴트 발색 비교 💄 이거 완전 인생템이에요',ad3_tag:'💄 틴트 발색',
+  ad4_cat:'홈케어',ad4_body:'주말 홈케어 마스크팩 루틴 🧖‍♀️ 오늘도 꿀잠 각!',ad4_tag:'🧖‍♀️ 홈케어',
   diary_title:'뷰티 다이어리',diary_sub:'2026.06.29 · 매일 30초, 오늘의 나를 기록해요',add_photo:'오늘의 사진 추가',
   how_skin:'오늘 피부는 어땠나요?',memo:'오늘의 메모',memo_ph:'자기 전 마스크팩을 했더니 아침에 촉촉했어요…',
   diary_ai:'최근 7일 수분이 +15% 올랐어요. 지금 루틴을 유지해보세요!',beauty_tl:'뷰티 타임라인',pt:'점',
@@ -829,6 +835,12 @@ const I={
   before:'TRƯỚC',after:'SAU',feed_body1:'Đổi routine 2 tuần, mụn giảm hẳn! Cùng cổ vũ nhé 🙌',
   cheer:'Cổ vũ',comment:'Bình luận',save:'Lưu',feed_ago2:'Hôm qua · Chia sẻ routine',routine_share:'Chia sẻ routine',
   feed_body2:'Routine ban đêm cho da khô ✨ Toner pad → Serum → Kem dưỡng ẩm!',p_toner:'Toner pad',p_serum:'Serum',p_cream:'Kem ẩm',
+  golf_time:'Hôm nay · Sân golf',golf_pill:'Ngoài trời',golf_body:'Bôi kem chống nắng rồi đi làm thêm ở sân golf ☀️⛳',golf_tag:'⛳ Làm thêm sân golf',
+  fire_time:'Vừa xong · Dạo đêm',fire_pill:'Thường ngày',fire_body:'Mặt mộc nên tối mới dám ra ngoài 🌙✨',fire_tag:'🌙 Tối nay',ad_label:'Quảng cáo',
+  ad1_cat:'Chăm sóc da',ad1_body:'Chia sẻ routine serum cấp ẩm buổi sáng 💧 Thẩm thấu cực tốt',ad1_tag:'💧 Routine buổi sáng',
+  ad2_cat:'Trang điểm',ad2_body:'Cùng makeup hằng ngày nào ✨ Bật mí bí kíp nâng tông hôm nay!',ad2_tag:'✨ Makeup hằng ngày',
+  ad3_cat:'Son môi',ad3_body:'So sánh lên màu son tint mới 💄 Đúng là chân ái luôn!',ad3_tag:'💄 Lên màu son tint',
+  ad4_cat:'Chăm sóc tại nhà',ad4_body:'Routine đắp mặt nạ cuối tuần 🧖‍♀️ Tối nay ngủ ngon là cái chắc!',ad4_tag:'🧖‍♀️ Chăm sóc tại nhà',
   diary_title:'Nhật ký làm đẹp',diary_sub:'29.06.2026 · Mỗi ngày 30 giây, ghi lại bản thân',add_photo:'Thêm ảnh hôm nay',
   how_skin:'Hôm nay da bạn thế nào?',memo:'Ghi chú hôm nay',memo_ph:'Đắp mặt nạ trước khi ngủ, sáng dậy da căng mọng…',
   diary_ai:'7 ngày qua độ ẩm tăng +15%. Hãy duy trì routine hiện tại nhé!',beauty_tl:'Dòng thời gian làm đẹp',pt:' điểm',
