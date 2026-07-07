@@ -331,10 +331,10 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">채</div>
-          <div style="flex:1"><b style="font-size:14px">채원</b><br><span class="tiny muted">아침 · 수분 루틴</span></div>
+          <div style="flex:1"><b style="font-size:14px">채원</b><br><span class="tiny" style="color:#d6336c;font-weight:700">📢 광고</span></div>
           <span class="pill purple">스킨케어</span>
         </div>
         <p style="font-size:13.5px;margin:0 0 10px">아침 수분 세럼 루틴 공유해요 💧 흡수력이 진짜 좋아요</p>
@@ -349,10 +349,10 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">지</div>
-          <div style="flex:1"><b style="font-size:14px">지아</b><br><span class="tiny muted">2시간 전 · GRWM</span></div>
+          <div style="flex:1"><b style="font-size:14px">지아</b><br><span class="tiny" style="color:#d6336c;font-weight:700">📢 광고</span></div>
           <span class="pill pink">메이크업</span>
         </div>
         <p style="font-size:13.5px;margin:0 0 10px">데일리 메이크업 같이 해요 ✨ 오늘의 톤업 꿀팁 방출!</p>
@@ -367,10 +367,10 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">린</div>
-          <div style="flex:1"><b style="font-size:14px">린다</b><br><span class="tiny muted">어제 · 신상 리뷰</span></div>
+          <div style="flex:1"><b style="font-size:14px">린다</b><br><span class="tiny" style="color:#d6336c;font-weight:700">📢 광고</span></div>
           <span class="pill purple">립</span>
         </div>
         <p style="font-size:13.5px;margin:0 0 10px">신상 틴트 발색 비교 💄 이거 완전 인생템이에요</p>
@@ -385,10 +385,10 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" data-ad="1">
         <div class="feedhead">
           <div class="avatar" style="width:40px;height:40px">미</div>
-          <div style="flex:1"><b style="font-size:14px">미소</b><br><span class="tiny muted">주말 · 홈케어</span></div>
+          <div style="flex:1"><b style="font-size:14px">미소</b><br><span class="tiny" style="color:#d6336c;font-weight:700">📢 광고</span></div>
           <span class="pill pink">홈케어</span>
         </div>
         <p style="font-size:13.5px;margin:0 0 10px">주말 홈케어 마스크팩 루틴 🧖‍♀️ 오늘도 꿀잠 각!</p>
@@ -1083,12 +1083,16 @@ function setLang(l){
 function doFollow(b){b.textContent='✓ '+I[cur].following;}
 function doApply(){alert(I[cur].applied_msg);}
 
-// 피드: 최근 등록한 글이 맨 위로 (최신순 정렬)
+// 피드: 최신순 + 광고를 일반 글 사이에 자연스럽게 섞기
 (function(){
   var feed=document.getElementById('s-feed');
   if(!feed)return;
-  var cards=[].slice.call(feed.querySelectorAll('.card'));
-  cards.reverse().forEach(function(c){feed.appendChild(c);});
+  var all=[].slice.call(feed.querySelectorAll('.card'));
+  var ads=all.filter(function(c){return c.hasAttribute('data-ad');}).reverse();
+  var normal=all.filter(function(c){return !c.hasAttribute('data-ad');}).reverse();
+  var mixed=[],n=Math.max(normal.length,ads.length);
+  for(var i=0;i<n;i++){ if(normal[i])mixed.push(normal[i]); if(ads[i])mixed.push(ads[i]); }
+  mixed.forEach(function(c){feed.appendChild(c);});
 })();
 </script>
 </body>
