@@ -159,6 +159,21 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
 .tab.center{position:relative;top:-6px}
 .tab.center .i{width:50px;height:50px;border-radius:18px;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 10px 20px -6px rgba(136,92,246,.6)}
 .scrolltag{font-size:10px;color:#fff}
+  /* ----- 기사 상세 모달 ----- */
+  .photo.clickable{cursor:pointer}
+  .photo.clickable::after{content:"자세히 보기 ›";position:absolute;right:10px;top:10px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+  .artmodal{display:none;position:fixed;inset:0;z-index:100;background:rgba(20,20,30,.55);align-items:flex-end;justify-content:center}
+  .artmodal.on{display:flex}
+  .artsheet{width:100%;max-width:460px;max-height:92vh;background:#fff;border-radius:20px 20px 0 0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .arthead{position:sticky;top:0;background:#fff;display:flex;align-items:flex-start;gap:10px;padding:16px 18px 12px;border-bottom:1px solid #eee;z-index:2}
+  .arthead .ht{flex:1}
+  .arthead .ht b{font-size:16px;display:block;line-height:1.35}
+  .arthead .ht span{font-size:12px;color:#999}
+  .artclose{width:30px;height:30px;border-radius:50%;border:0;background:#f2f2f4;font-size:14px;cursor:pointer;flex:none}
+  .artbody{padding:16px 18px 34px}
+  .artbody p{font-size:14px;line-height:1.75;color:#333;margin:0 0 14px}
+  .artbody img{width:100%;border-radius:12px;margin:0 0 14px;display:block;background:#f0f0f2}
+  .artlink{display:block;text-align:center;padding:12px;border-radius:12px;background:var(--pink,#d6336c);color:#fff;font-weight:700;text-decoration:none;font-size:14px;margin-top:6px}
 </style>
 </head>
 <body>
@@ -410,7 +425,7 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
           <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
         </div>
         <p style="font-size:13.5px;margin:0 0 10px" data-i="trend1_body">스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드 ✨ 큐빅·젬스톤으로 눈가부터 네일까지 포인트!</p>
-        <div class="photo">
+        <div class="photo clickable" onclick="openArticle('stone')">
           <img src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/trend1.png" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
           <span class="phototag" data-i="trend1_tag">💎 스톤 메이크업</span>
         </div>
@@ -428,7 +443,7 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
           <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
         </div>
         <p style="font-size:13.5px;margin:0 0 10px" data-i="trend2_body">입술산 하나 지웠을 뿐인데 분위기 싹 달라지는 블러 누드 립 💄 매트·크리미·펄 텍스처로 완성</p>
-        <div class="photo">
+        <div class="photo clickable" onclick="openArticle('lip')">
           <img src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/trend2.jpg" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
           <span class="phototag" data-i="trend2_tag">💄 블러 누드 립</span>
         </div>
@@ -1144,6 +1159,48 @@ function doApply(){alert(I[cur].applied_msg);}
   for(var i=0;i<n;i++){ if(normal[i])mixed.push(normal[i]); if(ads[i])mixed.push(ads[i]); }
   mixed.forEach(function(c){feed.appendChild(c);});
 })();
+// ----- 기사 상세 모달 -----
+var STONE_IMG=[],LIP_IMG=[];
+for(var _i=1;_i<=11;_i++)STONE_IMG.push('https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/stone-'+String(_i).padStart(2,'0')+'.png');
+for(var _j=1;_j<=6;_j++)LIP_IMG.push('https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/lip-'+String(_j).padStart(2,'0')+'.jpg');
+var ARTICLES={
+  stone:{title:'스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드',src:"Harper's Bazaar · 뷰티 트렌드",link:'https://www.harpersbazaar.co.kr/article/1905740',
+    paras:['올여름 뷰티 트렌드는 큐빅과 젬스톤을 활용한 스톤 메이크업. 눈가부터 입술, 쇄골, 네일까지 다양한 부위에 적용할 수 있어요.',
+'윤채는 비비드한 핑크 톤에 과감한 스톤 레이어드를 매치. 치크와 눈가에 다양한 크기의 큐빅으로 장난스럽고 힙한 무드를 연출했어요.',
+'예지는 블랙 아이라인을 중심으로 눈두덩과 언더라인에 미니 큐빅을 배치해 은은하게 빛나는 시각 효과를 냈어요.',
+'리아는 눈 앞머리에 반짝이는 스톤 2개만 더하는 입문자 친화 스타일. 화이트·핑크 계열은 눈을 가로로 길어 보이게 해요.',
+'치크, 눈두덩, 입술, 쇄골 라인, 팔 등 얼굴 이외 부위에도 스톤을 활용할 수 있어요.',
+'카일리 제너는 스톤 플라워 디자인과 비비드 큐빅을 자유롭게 조합한 젬스톤 네일로 페스티벌·데일리 룩을 완성.',
+'투명 베이스에 나비·하트·별·꽃 등 파스텔 미니 스톤을 규칙 없이 배치한 시럽 네일도 인기.',
+'클래식 화이트 프렌치에 빨강·파랑·초록 컬러 큐빅을 더하면 팝하게 변신해요.'],imgs:STONE_IMG},
+  lip:{title:'입술산 지운 블러 누드 립',src:'Cosmopolitan · 뷰티 트렌드',link:'https://www.cosmopolitan.co.kr/article/1905672',
+    paras:['입술산을 또렷하게 그리던 방식에서 벗어나 경계를 자연스럽게 풀어내는 블러 립이 대세. 매트·크리미·펄 등 텍스처는 달라도 입술산의 존재감을 지운다는 공통점이 있어요.',
+'윈터는 누디한 브라운 톤에 미세한 펄을 더해 깊이 있고 세련된 분위기. 텍스처와 디테일만으로 존재감을 드러냈어요.',
+'예나는 매트한 블러 립으로 채도를 낮춘 누드 톤. 입술산을 둥글게 표현해 인형 같은 무드를 완성.',
+'홍은채는 촉촉한 크리미 블러 립으로 청순한 이미지. 입술산을 자연스럽게 흐려 부드럽고 입체적으로.',
+'모카는 강한 스타일링에 크리미 누드 립으로 여백을 만들어 차가운 무드에 부드러움을 더했어요.',
+'류진은 혈색만 은은하게 머금은 컬러로 깨끗한 피부와 조화. 윤곽을 또렷이 그리지 않아도 세련된 여유를 연출.'],imgs:LIP_IMG}
+};
+function openArticle(id){
+  var a=ARTICLES[id];if(!a)return;
+  document.getElementById('artTitle').textContent=a.title;
+  document.getElementById('artSrc').textContent=a.src;
+  var h='',n=Math.max(a.paras.length,a.imgs.length);
+  for(var i=0;i<n;i++){ if(a.imgs[i])h+='<img loading="lazy" src="'+a.imgs[i]+'" alt="">'; if(a.paras[i])h+='<p>'+a.paras[i]+'</p>'; }
+  h+='<a class="artlink" href="'+a.link+'" target="_blank" rel="noopener">원문 기사 보기 ›</a>';
+  document.getElementById('artBody').innerHTML=h;
+  var m=document.getElementById('artModal');m.classList.add('on');m.querySelector('.artsheet').scrollTop=0;
+}
+function closeArticle(){document.getElementById('artModal').classList.remove('on');}
 </script>
+<div id="artModal" class="artmodal" onclick="if(event.target===this)closeArticle()">
+  <div class="artsheet">
+    <div class="arthead">
+      <div class="ht"><b id="artTitle"></b><span id="artSrc"></span></div>
+      <button class="artclose" onclick="closeArticle()">✕</button>
+    </div>
+    <div class="artbody" id="artBody"></div>
+  </div>
+</div>
 </body>
 </html>
