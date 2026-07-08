@@ -454,6 +454,60 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
         </div>
       </div>
 
+      <div class="card">
+        <div class="feedhead">
+          <div class="avatar" style="width:40px;height:40px">P</div>
+          <div style="flex:1"><b style="font-size:14px">PONY Syndrome</b><br><span class="tiny muted" data-i="trend_time">뷰티 트렌드</span></div>
+          <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
+        </div>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="yt1_body">청순함에 스모키 한 방울 🤍</p>
+        <div class="photo clickable" onclick="openArticle('yt1')">
+          <img src="https://i.ytimg.com/vi/k3DatV86zkM/hqdefault.jpg" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
+          <span class="phototag" data-i="yt_tag">▶️ 영상 보기</span>
+        </div>
+        <div class="feedact">
+          <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">512</b></button>
+          <button>💬 <span>댓글</span> 63</button>
+          <button>🔖 <span>저장</span></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="feedhead">
+          <div class="avatar" style="width:40px;height:40px">G</div>
+          <div style="flex:1"><b style="font-size:14px">GO지승</b><br><span class="tiny muted" data-i="trend_time">뷰티 트렌드</span></div>
+          <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
+        </div>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="yt2_body">어른 여자의 크리미 스모키 + 누드립 ❤︎</p>
+        <div class="photo clickable" onclick="openArticle('yt2')">
+          <img src="https://i.ytimg.com/vi/h9kyhKOrXZc/hqdefault.jpg" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
+          <span class="phototag" data-i="yt_tag">▶️ 영상 보기</span>
+        </div>
+        <div class="feedact">
+          <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">388</b></button>
+          <button>💬 <span>댓글</span> 47</button>
+          <button>🔖 <span>저장</span></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="feedhead">
+          <div class="avatar" style="width:40px;height:40px">닥</div>
+          <div style="flex:1"><b style="font-size:14px">닥터블랑</b><br><span class="tiny muted" data-i="trend_time">뷰티 트렌드</span></div>
+          <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
+        </div>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="yt3_body">동안 의사의 스킨케어 루틴</p>
+        <div class="photo clickable" onclick="openArticle('yt3')">
+          <img src="https://i.ytimg.com/vi/udVKXMYgiC0/hqdefault.jpg" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
+          <span class="phototag" data-i="yt_tag">▶️ 영상 보기</span>
+        </div>
+        <div class="feedact">
+          <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">729</b></button>
+          <button>💬 <span>댓글</span> 91</button>
+          <button>🔖 <span>저장</span></button>
+        </div>
+      </div>
+
     </section>
 
     <!-- ========================= DIARY ========================= -->
@@ -830,6 +884,7 @@ const I={
   feed_body2:'건성 피부 밤 루틴 ✨ 토너패드 → 세럼 → 수분크림 순서 강추!',p_toner:'토너패드',p_serum:'세럼',p_cream:'수분크림',
   golf_time:'오늘 · 골프장',golf_pill:'야외',golf_body:'알바 선크림 바르고 골프장 다녀왔어요 ☀️⛳',golf_tag:'⛳ 골프장 알바',
   trend_time:'뷰티 트렌드',trend1_body:'스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드 ✨ 큐빅·젬스톤으로 눈가부터 네일까지 포인트!',trend1_tag:'💎 스톤 메이크업',trend2_body:'입술산 하나 지웠을 뿐인데 분위기 싹 달라지는 블러 누드 립 💄 매트·크리미·펄 텍스처로 완성',trend2_tag:'💄 블러 누드 립',
+  yt1_body:'청순함에 스모키 한 방울 🤍',yt2_body:'어른 여자의 크리미 스모키 + 누드립 ❤︎',yt3_body:'동안 의사의 스킨케어 루틴',yt_tag:'▶️ 영상 보기',
   fire_time:'방금 · 밤 산책',fire_pill:'일상',fire_body:'쌩얼이라 밤에 밖에 나왔어요 🌙✨',fire_tag:'🌙 오늘 밤',ad_label:'광고',
   ad1_cat:'스킨케어',ad1_body:'아침 수분 세럼 루틴 공유해요 💧 흡수력이 진짜 좋아요',ad1_tag:'💧 모닝 루틴',
   ad2_cat:'메이크업',ad2_body:'데일리 메이크업 같이 해요 ✨ 오늘의 톤업 꿀팁 방출!',ad2_tag:'✨ 데일리 메이크업',
@@ -889,6 +944,7 @@ const I={
   feed_body2:'Routine ban đêm cho da khô ✨ Toner pad → Serum → Kem dưỡng ẩm!',p_toner:'Toner pad',p_serum:'Serum',p_cream:'Kem ẩm',
   golf_time:'Hôm nay · Sân golf',golf_pill:'Ngoài trời',golf_body:'Bôi kem chống nắng rồi đi làm thêm ở sân golf ☀️⛳',golf_tag:'⛳ Làm thêm sân golf',
   trend_time:'Xu hướng làm đẹp',trend1_body:'Trang điểm đá quý — xu hướng lấp lánh nhất hè này ✨ Điểm nhấn từ vùng mắt đến móng bằng đá cubic, gemstone!',trend1_tag:'💎 Trang điểm đá quý',trend2_body:'Chỉ xóa đỉnh môi thôi mà khí chất khác hẳn 💄 Son nude blur với chất matte, kem, nhũ',trend2_tag:'💄 Son nude blur',
+  yt1_body:'Chút khói trên nền trong veo 🤍',yt2_body:'Smoky kem quyến rũ + son nude ❤︎',yt3_body:'Routine skincare của bác sĩ trẻ lâu',yt_tag:'▶️ Xem video',
   fire_time:'Vừa xong · Dạo đêm',fire_pill:'Thường ngày',fire_body:'Mặt mộc nên tối mới dám ra ngoài 🌙✨',fire_tag:'🌙 Tối nay',ad_label:'Quảng cáo',
   ad1_cat:'Chăm sóc da',ad1_body:'Chia sẻ routine serum cấp ẩm buổi sáng 💧 Thẩm thấu cực tốt',ad1_tag:'💧 Routine buổi sáng',
   ad2_cat:'Trang điểm',ad2_body:'Cùng makeup hằng ngày nào ✨ Bật mí bí kíp nâng tông hôm nay!',ad2_tag:'✨ Makeup hằng ngày',
@@ -1164,30 +1220,65 @@ var STONE_IMG=[],LIP_IMG=[];
 for(var _i=1;_i<=11;_i++)STONE_IMG.push('https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/stone-'+String(_i).padStart(2,'0')+'.png');
 for(var _j=1;_j<=6;_j++)LIP_IMG.push('https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/lip-'+String(_j).padStart(2,'0')+'.jpg');
 var ARTICLES={
-  stone:{title:'스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드',src:"Harper's Bazaar · 뷰티 트렌드",link:'https://www.harpersbazaar.co.kr/article/1905740',
-    paras:['올여름 뷰티 트렌드는 큐빅과 젬스톤을 활용한 스톤 메이크업. 눈가부터 입술, 쇄골, 네일까지 다양한 부위에 적용할 수 있어요.',
+  stone:{link:'https://www.harpersbazaar.co.kr/article/1905740',imgs:STONE_IMG,
+    ko:{title:'스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드',src:"Harper's Bazaar · 뷰티 트렌드",paras:[
+'올여름 뷰티 트렌드는 큐빅과 젬스톤을 활용한 스톤 메이크업. 눈가부터 입술, 쇄골, 네일까지 다양한 부위에 적용할 수 있어요.',
 '윤채는 비비드한 핑크 톤에 과감한 스톤 레이어드를 매치. 치크와 눈가에 다양한 크기의 큐빅으로 장난스럽고 힙한 무드를 연출했어요.',
 '예지는 블랙 아이라인을 중심으로 눈두덩과 언더라인에 미니 큐빅을 배치해 은은하게 빛나는 시각 효과를 냈어요.',
 '리아는 눈 앞머리에 반짝이는 스톤 2개만 더하는 입문자 친화 스타일. 화이트·핑크 계열은 눈을 가로로 길어 보이게 해요.',
 '치크, 눈두덩, 입술, 쇄골 라인, 팔 등 얼굴 이외 부위에도 스톤을 활용할 수 있어요.',
 '카일리 제너는 스톤 플라워 디자인과 비비드 큐빅을 자유롭게 조합한 젬스톤 네일로 페스티벌·데일리 룩을 완성.',
 '투명 베이스에 나비·하트·별·꽃 등 파스텔 미니 스톤을 규칙 없이 배치한 시럽 네일도 인기.',
-'클래식 화이트 프렌치에 빨강·파랑·초록 컬러 큐빅을 더하면 팝하게 변신해요.'],imgs:STONE_IMG},
-  lip:{title:'입술산 지운 블러 누드 립',src:'Cosmopolitan · 뷰티 트렌드',link:'https://www.cosmopolitan.co.kr/article/1905672',
-    paras:['입술산을 또렷하게 그리던 방식에서 벗어나 경계를 자연스럽게 풀어내는 블러 립이 대세. 매트·크리미·펄 등 텍스처는 달라도 입술산의 존재감을 지운다는 공통점이 있어요.',
+'클래식 화이트 프렌치에 빨강·파랑·초록 컬러 큐빅을 더하면 팝하게 변신해요.']},
+    vi:{title:'Trang điểm đá quý — xu hướng lấp lánh nhất hè này',src:"Harper's Bazaar · Xu hướng",paras:[
+'Xu hướng làm đẹp hè này là trang điểm đá quý với cubic và gemstone. Có thể áp dụng từ vùng mắt, môi, xương quai xanh đến móng tay.',
+'Yoonchae kết hợp tông hồng rực với lớp đá quý táo bạo. Dùng cubic nhiều kích cỡ ở má và vùng mắt tạo vibe tinh nghịch, cá tính.',
+'Yeji đặt cubic mini quanh viền mắt đen và bọng mắt dưới, tạo hiệu ứng lấp lánh dịu nhẹ.',
+'Ryu (Lia) chỉ thêm 2 viên đá lấp lánh ở đầu mắt — kiểu dễ cho người mới. Tông trắng, hồng giúp mắt trông dài hơn.',
+'Ngoài khuôn mặt, có thể dùng đá ở má, bọng mắt, môi, xương quai xanh, cánh tay...',
+'Kylie Jenner hoàn thiện móng gemstone với thiết kế hoa đá và cubic rực rỡ, hợp cả lễ hội lẫn hằng ngày.',
+'Móng syrup trong suốt với đá mini pastel hình bướm, tim, sao, hoa đặt tự do cũng rất hot.',
+'Thêm cubic màu đỏ, xanh dương, xanh lá lên móng French trắng cổ điển để biến tấu pop hơn.']}},
+  lip:{link:'https://www.cosmopolitan.co.kr/article/1905672',imgs:LIP_IMG,
+    ko:{title:'입술산 지운 블러 누드 립',src:'Cosmopolitan · 뷰티 트렌드',paras:[
+'입술산을 또렷하게 그리던 방식에서 벗어나 경계를 자연스럽게 풀어내는 블러 립이 대세. 매트·크리미·펄 등 텍스처는 달라도 입술산의 존재감을 지운다는 공통점이 있어요.',
 '윈터는 누디한 브라운 톤에 미세한 펄을 더해 깊이 있고 세련된 분위기. 텍스처와 디테일만으로 존재감을 드러냈어요.',
 '예나는 매트한 블러 립으로 채도를 낮춘 누드 톤. 입술산을 둥글게 표현해 인형 같은 무드를 완성.',
 '홍은채는 촉촉한 크리미 블러 립으로 청순한 이미지. 입술산을 자연스럽게 흐려 부드럽고 입체적으로.',
 '모카는 강한 스타일링에 크리미 누드 립으로 여백을 만들어 차가운 무드에 부드러움을 더했어요.',
-'류진은 혈색만 은은하게 머금은 컬러로 깨끗한 피부와 조화. 윤곽을 또렷이 그리지 않아도 세련된 여유를 연출.'],imgs:LIP_IMG}
+'류진은 혈색만 은은하게 머금은 컬러로 깨끗한 피부와 조화. 윤곽을 또렷이 그리지 않아도 세련된 여유를 연출.']},
+    vi:{title:'Son nude blur — xóa đỉnh môi',src:'Cosmopolitan · Xu hướng',paras:[
+'Thay vì kẻ đỉnh môi rõ nét, xu hướng son blur làm mờ viền môi tự nhiên đang lên ngôi. Dù matte, kem hay nhũ, điểm chung là xóa đi sự hiện diện của đỉnh môi.',
+'Winter thêm chút nhũ mịn lên tông nâu nude, tạo vibe sâu lắng và tinh tế. Chỉ bằng chất son và chi tiết mà vẫn nổi bật.',
+'Yena dùng son blur matte tông nude giảm độ bão hòa. Bo tròn đỉnh môi tạo cảm giác búp bê.',
+'Hong Eunchae với son blur kem ẩm mượt cho hình ảnh trong trẻo. Làm mờ đỉnh môi tự nhiên, mềm mại và có khối.',
+'Moka thêm son nude kem tạo khoảng lặng cho phong cách mạnh, làm dịu vibe lạnh.',
+'Ryujin chỉ giữ chút sắc hồng nhẹ hòa cùng làn da sạch. Không cần kẻ viền rõ vẫn toát nét tinh tế thảnh thơi.']}},
+  yt1:{type:'yt',ytid:'k3DatV86zkM',link:'https://youtu.be/k3DatV86zkM',
+    ko:{title:'청순함에 스모키 한 방울 🤍',src:'PONY Syndrome · 유튜브',desc:'청순함에 스모키 한 방울을 더한 데일리 세미 스모키 메이크업 튜토리얼. 은은한 음영으로 부담 없이 분위기를 살려요.'},
+    vi:{title:'Chút khói trên nền trong veo 🤍',src:'PONY Syndrome · YouTube',desc:'Hướng dẫn trang điểm semi-smoky hằng ngày, thêm chút khói trên nền trong trẻo. Tạo chiều sâu nhẹ nhàng mà vẫn tự nhiên.'}},
+  yt2:{type:'yt',ytid:'h9kyhKOrXZc',link:'https://youtu.be/h9kyhKOrXZc',
+    ko:{title:'어른 여자의 크리미 스모키 + 누드립 ❤︎',src:'GO지승 · 유튜브',desc:'성숙한 무드의 크리미 스모키 메이크업과 느낌 좋은 누드립 추천. 데일리로 활용하기 좋아요.'},
+    vi:{title:'Smoky kem quyến rũ + son nude ❤︎',src:'GO지승 · YouTube',desc:'Trang điểm smoky kem trưởng thành cùng gợi ý son nude ưng ý. Rất hợp để dùng hằng ngày.'}},
+  yt3:{type:'yt',ytid:'udVKXMYgiC0',link:'https://youtu.be/udVKXMYgiC0',
+    ko:{title:'동안 의사의 스킨케어 루틴',src:'닥터블랑 · 유튜브',desc:'피부과 안 가고도 피부가 좋아지는, 동안 의사의 스킨케어 루틴 공개. 클렌징부터 보습까지 순서대로 알려줘요.'},
+    vi:{title:'Routine skincare của bác sĩ trẻ lâu',src:'닥터블랑 · YouTube',desc:'Bí quyết skincare giúp da đẹp mà không cần đến phòng khám, từ bác sĩ trẻ lâu. Hướng dẫn từ làm sạch đến dưỡng ẩm.'}}
 };
 function openArticle(id){
   var a=ARTICLES[id];if(!a)return;
-  document.getElementById('artTitle').textContent=a.title;
-  document.getElementById('artSrc').textContent=a.src;
-  var h='',n=Math.max(a.paras.length,a.imgs.length);
-  for(var i=0;i<n;i++){ if(a.imgs[i])h+='<img loading="lazy" src="'+a.imgs[i]+'" alt="">'; if(a.paras[i])h+='<p>'+a.paras[i]+'</p>'; }
-  h+='<a class="artlink" href="'+a.link+'" target="_blank" rel="noopener">원문 기사 보기 ›</a>';
+  var L=a[cur]||a.ko;
+  document.getElementById('artTitle').textContent=L.title;
+  document.getElementById('artSrc').textContent=L.src;
+  var h='';
+  if(a.type==='yt'){
+    h+='<div style="position:relative;padding-bottom:56.25%;height:0;margin-bottom:14px"><iframe src="https://www.youtube.com/embed/'+a.ytid+'" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>';
+    h+='<p>'+L.desc+'</p>';
+    h+='<a class="artlink" href="'+a.link+'" target="_blank" rel="noopener">'+(cur==='vi'?'Xem trên YouTube ›':'유튜브에서 보기 ›')+'</a>';
+  }else{
+    var n=Math.max(L.paras.length,a.imgs.length);
+    for(var i=0;i<n;i++){ if(a.imgs[i])h+='<img loading="lazy" src="'+a.imgs[i]+'" alt="">'; if(L.paras[i])h+='<p>'+L.paras[i]+'</p>'; }
+    h+='<a class="artlink" href="'+a.link+'" target="_blank" rel="noopener">'+(cur==='vi'?'Xem bài gốc ›':'원문 기사 보기 ›')+'</a>';
+  }
   document.getElementById('artBody').innerHTML=h;
   var m=document.getElementById('artModal');m.classList.add('on');m.querySelector('.artsheet').scrollTop=0;
 }
