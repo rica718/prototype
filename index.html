@@ -403,6 +403,42 @@ h2.title{font-size:22px;font-weight:800;margin:8px 0 2px}
         </div>
       </div>
 
+      <div class="card">
+        <div class="feedhead">
+          <div class="avatar" style="width:40px;height:40px">💎</div>
+          <div style="flex:1"><b style="font-size:14px">Harper's Bazaar</b><br><span class="tiny muted" data-i="trend_time">뷰티 트렌드</span></div>
+          <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
+        </div>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="trend1_body">스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드 ✨ 큐빅·젬스톤으로 눈가부터 네일까지 포인트!</p>
+        <div class="photo">
+          <img src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/trend1.png" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
+          <span class="phototag" data-i="trend1_tag">💎 스톤 메이크업</span>
+        </div>
+        <div class="feedact">
+          <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">324</b></button>
+          <button>💬 <span>댓글</span> 41</button>
+          <button>🔖 <span>저장</span></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="feedhead">
+          <div class="avatar" style="width:40px;height:40px">💄</div>
+          <div style="flex:1"><b style="font-size:14px">Cosmopolitan</b><br><span class="tiny muted" data-i="trend_time">뷰티 트렌드</span></div>
+          <span class="pill" style="background:#7b57c9;color:#fff;font-weight:700">Trend</span>
+        </div>
+        <p style="font-size:13.5px;margin:0 0 10px" data-i="trend2_body">입술산 하나 지웠을 뿐인데 분위기 싹 달라지는 블러 누드 립 💄 매트·크리미·펄 텍스처로 완성</p>
+        <div class="photo">
+          <img src="https://njnulognxhrwdqnuclwa.supabase.co/storage/v1/object/public/videos/prototype/trend2.jpg" style="display:block;width:100%;height:320px;object-fit:cover;background:#000" alt="">
+          <span class="phototag" data-i="trend2_tag">💄 블러 누드 립</span>
+        </div>
+        <div class="feedact">
+          <button onclick="cheer(this)">🤍 <span>응원</span> <b class="cnt">276</b></button>
+          <button>💬 <span>댓글</span> 33</button>
+          <button>🔖 <span>저장</span></button>
+        </div>
+      </div>
+
     </section>
 
     <!-- ========================= DIARY ========================= -->
@@ -778,6 +814,7 @@ const I={
   cheer:'응원',comment:'댓글',save:'저장',feed_ago2:'어제 · 루틴 공유',routine_share:'루틴 공유',
   feed_body2:'건성 피부 밤 루틴 ✨ 토너패드 → 세럼 → 수분크림 순서 강추!',p_toner:'토너패드',p_serum:'세럼',p_cream:'수분크림',
   golf_time:'오늘 · 골프장',golf_pill:'야외',golf_body:'알바 선크림 바르고 골프장 다녀왔어요 ☀️⛳',golf_tag:'⛳ 골프장 알바',
+  trend_time:'뷰티 트렌드',trend1_body:'스톤 메이크업, 올여름 가장 반짝이는 뷰티 트렌드 ✨ 큐빅·젬스톤으로 눈가부터 네일까지 포인트!',trend1_tag:'💎 스톤 메이크업',trend2_body:'입술산 하나 지웠을 뿐인데 분위기 싹 달라지는 블러 누드 립 💄 매트·크리미·펄 텍스처로 완성',trend2_tag:'💄 블러 누드 립',
   fire_time:'방금 · 밤 산책',fire_pill:'일상',fire_body:'쌩얼이라 밤에 밖에 나왔어요 🌙✨',fire_tag:'🌙 오늘 밤',ad_label:'광고',
   ad1_cat:'스킨케어',ad1_body:'아침 수분 세럼 루틴 공유해요 💧 흡수력이 진짜 좋아요',ad1_tag:'💧 모닝 루틴',
   ad2_cat:'메이크업',ad2_body:'데일리 메이크업 같이 해요 ✨ 오늘의 톤업 꿀팁 방출!',ad2_tag:'✨ 데일리 메이크업',
@@ -836,6 +873,7 @@ const I={
   cheer:'Cổ vũ',comment:'Bình luận',save:'Lưu',feed_ago2:'Hôm qua · Chia sẻ routine',routine_share:'Chia sẻ routine',
   feed_body2:'Routine ban đêm cho da khô ✨ Toner pad → Serum → Kem dưỡng ẩm!',p_toner:'Toner pad',p_serum:'Serum',p_cream:'Kem ẩm',
   golf_time:'Hôm nay · Sân golf',golf_pill:'Ngoài trời',golf_body:'Bôi kem chống nắng rồi đi làm thêm ở sân golf ☀️⛳',golf_tag:'⛳ Làm thêm sân golf',
+  trend_time:'Xu hướng làm đẹp',trend1_body:'Trang điểm đá quý — xu hướng lấp lánh nhất hè này ✨ Điểm nhấn từ vùng mắt đến móng bằng đá cubic, gemstone!',trend1_tag:'💎 Trang điểm đá quý',trend2_body:'Chỉ xóa đỉnh môi thôi mà khí chất khác hẳn 💄 Son nude blur với chất matte, kem, nhũ',trend2_tag:'💄 Son nude blur',
   fire_time:'Vừa xong · Dạo đêm',fire_pill:'Thường ngày',fire_body:'Mặt mộc nên tối mới dám ra ngoài 🌙✨',fire_tag:'🌙 Tối nay',ad_label:'Quảng cáo',
   ad1_cat:'Chăm sóc da',ad1_body:'Chia sẻ routine serum cấp ẩm buổi sáng 💧 Thẩm thấu cực tốt',ad1_tag:'💧 Routine buổi sáng',
   ad2_cat:'Trang điểm',ad2_body:'Cùng makeup hằng ngày nào ✨ Bật mí bí kíp nâng tông hôm nay!',ad2_tag:'✨ Makeup hằng ngày',
